@@ -2,7 +2,6 @@ class Board
   attr_accessor :cells
 
   def initialize
-    # @cells = [" ", " ", " ", " ", " ", " ", " ", " ", " "]
     @cells = Array.new(9, " ")
   end
 
@@ -27,7 +26,7 @@ class Board
   end
 
   def turn_count
-    @cells.count{ | i | i == "X" || i == "0" }
+    @cells.count{ | i | i == "X" || i == "O" }
   end
 
   def taken?(position_number)
