@@ -27,13 +27,7 @@ class Board
   end
 
   def turn_count
-    counter = 0
-    self.cells.each do |position|
-      if position == "X" || position == "O"
-      counter += 1
-      end
-    end
-    counter
+    @cells.count{ | i | i == "X" || i == "0" }
   end
 
   def taken?(position_number)
