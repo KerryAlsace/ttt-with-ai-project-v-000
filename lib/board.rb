@@ -7,7 +7,7 @@ class Board
   end
 
   def position(position_number)
-    @cells[position.to_i - 1]
+    @cells[position_number.to_i - 1]
   end
 
   def reset!
