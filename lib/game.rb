@@ -46,11 +46,10 @@ class Game
   end
 
   def winner
-    if winning_combo = self.won?
-      self.board.cells[winning_combo.first]
+    if won?
+      self.board.cells[won?.first]
     end
   end
-  ## why does this work?? ^
 
   def turn
     if self.board.turn_count == 0
