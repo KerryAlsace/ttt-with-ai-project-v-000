@@ -3,23 +3,12 @@ module Players
   class Computer < Player
 
     def opponent_token
-      if self.token == "O"
+      if token == "O"
         "X"
-      elsif self.token == "X"
+      elsif token == "X"
         "O"
       end
     end
-
-  #    WIN_COMBINATIONS = [
-  #   [0, 1, 2], # Top row = WIN_COMBINATIONS[0] board.position((win_combo[2] + 1).to_s) == opponent_token
-  #   [3, 4, 5], # Middle row = WIN_COMBINATIONS[1] board.position((win_combo[1] + 1).to_s) == opponent_token
-  #   [6, 7, 8], # Bottom row = WIN_COMBINATIONS[2]
-  #   [0, 3, 6], # Left column = WIN_COMBINATIONS[3]
-  #   [1, 4, 7], # Middle column = WIN_COMBINATIONS[4] board.position((win_combo[1] + 1).to_s) == opponent_token
-  #   [2, 5, 8], # Right column = WIN_COMBINATIONS[5] board.position((win_combo[0] + 1).to_s) == opponent_token
-  #   [0, 4, 8], # Left-to-right Diagonal = WIN_COMBINATIONS[6] board.position((win_combo[1] + 1).to_s) == opponent_token
-  #   [2, 4, 6] # Right-to-left Diagonal = WIN_COMBINATIONS[7] board.position((win_combo[0] + 1).to_s) == opponent_token
-  # ]
 
     def move(board)
       if !board.taken?("5")
@@ -78,4 +67,3 @@ module Players
 
   end
 end
-

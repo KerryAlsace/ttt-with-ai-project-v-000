@@ -7,26 +7,7 @@ class Board
   end
 
   def position(position_number)
-    case position_number
-    when "1"
-      self.cells[0]
-    when "2"
-      self.cells[1]
-    when "3"
-      self.cells[2]
-    when "4"
-      self.cells[3]
-    when "5"
-      self.cells[4]
-    when "6"
-      self.cells[5]
-    when "7"
-      self.cells[6]
-    when "8"
-      self.cells[7]
-    when "9"
-      self.cells[8]
-    end
+    @cells[position.to_i - 1]
   end
 
   def reset!
